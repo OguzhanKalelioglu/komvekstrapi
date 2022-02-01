@@ -1,6 +1,6 @@
 
 /* SQL Lite Connection */
-/*const path = require('path');
+const path = require('path');
 
 module.exports = ({ env }) => ({
   connection: {
@@ -11,11 +11,12 @@ module.exports = ({ env }) => ({
     useNullAsDefault: true,
   },
 });
-*/
+
+
 
 /* PostgreSQL Connection */
 
-
+/*
 module.exports = ({ env }) => ({
   connection: {
     client: 'postgres',
@@ -33,6 +34,7 @@ module.exports = ({ env }) => ({
     debug: false,
   },
 });
+*/
 
  
 
