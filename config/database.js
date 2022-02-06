@@ -1,5 +1,6 @@
 
 /* SQL Lite Connection */
+/*
 const path = require('path');
 
 module.exports = ({ env }) => ({
@@ -11,12 +12,12 @@ module.exports = ({ env }) => ({
     useNullAsDefault: true,
   },
 });
-
+*/
 
 
 /* PostgreSQL Connection */
 
-/*
+
 module.exports = ({ env }) => ({
   connection: {
     client: 'postgres',
@@ -25,16 +26,16 @@ module.exports = ({ env }) => ({
       port: env.int('DATABASE_PORT', 5432),
       database: env('DATABASE_NAME', 'strapi'),
       user: env('DATABASE_USERNAME', 'strapi'),
-      password: env('DATABASE_PASSWORD', 'strapi'),
+      password: env('DATABASE_PASSWORD', '123123123'),
       schema: env('DATABASE_SCHEMA', 'public'), // Not required
-      ssl: {
+     /* ssl: {
         rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false), // For self-signed certificates
-      },
+      }, */
     },
     debug: false,
   },
 });
-*/
+
 
  
 
