@@ -4,7 +4,7 @@
   "info": {
     "singularName": "status",
     "pluralName": "statuses",
-    "displayName": "status",
+    "displayName": "Truck Status",
     "description": ""
   },
   "options": {
@@ -12,17 +12,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "serino": {
+    "serialnumber": {
       "type": "string",
       "required": true
     },
-    "uretimbas": {
+    "production_start_date": {
       "type": "date"
     },
-    "uretimbit": {
+    "production_finish_date": {
       "type": "date"
     },
-    "shiprez": {
+    "ship_reservation": {
       "type": "date"
     },
     "status": {
@@ -38,10 +38,19 @@
       ],
       "required": true
     },
+    "customers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::customer.customer",
+      "inversedBy": "truck_statuses"
+    },
+    "model_no": {
+      "type": "string",
+      "required": true
+    },
     "slug": {
       "type": "uid",
-      "targetField": "serino",
-      "required": true
+      "targetField": "serialnumber"
     }
   }
 }

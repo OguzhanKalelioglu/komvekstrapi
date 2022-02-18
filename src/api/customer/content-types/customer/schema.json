@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "singularName": "customer",
+    "pluralName": "customers",
+    "displayName": "Customer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer_name": {
+      "type": "string"
+    },
+    "customer_email": {
+      "type": "email"
+    },
+    "customer_phone": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "customer_name"
+    },
+    "truck_statuses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::status.status",
+      "mappedBy": "customers"
+    }
+  }
+}
