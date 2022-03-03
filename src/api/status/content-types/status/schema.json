@@ -17,10 +17,12 @@
       "required": true
     },
     "production_start_date": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "production_finish_date": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "ship_reservation": {
       "type": "date"
@@ -44,13 +46,22 @@
       "target": "api::customer.customer",
       "inversedBy": "truck_statuses"
     },
-    "model_no": {
+    "chassis_no": {
       "type": "string",
       "required": true
     },
     "slug": {
       "type": "uid",
       "targetField": "serialnumber"
+    },
+    "model": {
+      "type": "enumeration",
+      "enum": [
+        "DinoXL",
+        "Sunset",
+        "Sunrise"
+      ],
+      "required": true
     }
   }
 }

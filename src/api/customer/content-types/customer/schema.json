@@ -4,7 +4,8 @@
   "info": {
     "singularName": "customer",
     "pluralName": "customers",
-    "displayName": "Customer"
+    "displayName": "Customer",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,10 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "customer_name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "customer_email": {
-      "type": "email"
+      "type": "email",
+      "required": false
     },
     "customer_phone": {
       "type": "string"
@@ -29,6 +32,10 @@
       "relation": "manyToMany",
       "target": "api::status.status",
       "mappedBy": "customers"
+    },
+    "country": {
+      "type": "string",
+      "required": true
     }
   }
 }
