@@ -4,7 +4,7 @@
   "info": {
     "singularName": "status",
     "pluralName": "statuses",
-    "displayName": "Truck Status",
+    "displayName": "Track Status",
     "description": ""
   },
   "options": {
