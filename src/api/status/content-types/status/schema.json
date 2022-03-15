@@ -40,12 +40,6 @@
       ],
       "required": true
     },
-    "customers": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::customer.customer",
-      "inversedBy": "truck_statuses"
-    },
     "chassis_no": {
       "type": "string",
       "required": true
@@ -62,6 +56,12 @@
         "Sunrise"
       ],
       "required": true
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "track_statuses"
     }
   }
 }

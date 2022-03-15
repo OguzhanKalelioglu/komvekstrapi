@@ -27,15 +27,15 @@
       "type": "uid",
       "targetField": "customer_name"
     },
-    "truck_statuses": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::status.status",
-      "mappedBy": "customers"
-    },
     "country": {
       "type": "string",
       "required": true
+    },
+    "track_statuses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::status.status",
+      "mappedBy": "customer"
     }
   }
 }
